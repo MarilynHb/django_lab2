@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Department</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Department Name:</label>
+        <input id="name" type="text" name="name" value="{{ department.name }}">
+        <button type="submit">Update Department</button>
+    </form>
+</body>
+</html>
