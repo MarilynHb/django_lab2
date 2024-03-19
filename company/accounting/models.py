@@ -11,7 +11,7 @@ class Employee(models.Model):
     name = models.CharField(max_length=100)
     dob = models.DateField()
     department_id = models.ForeignKey(Department, on_delete=models.CASCADE)
-    salaryId = models.ForeignKey('Salary', on_delete=models.CASCADE)
+    salary_id = models.ForeignKey('Salary', on_delete=models.CASCADE, null=True, blank=True)
     def __str__(self):
         return self.name
 
